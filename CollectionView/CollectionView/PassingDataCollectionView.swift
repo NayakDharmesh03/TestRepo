@@ -23,17 +23,12 @@ class PassingDataCollectionView: UIViewController {
                               "flowers",
                               "lotus",
                               "selected",
-                              "marguerite",
-                              "Raami",
-                              "Kavya",
-                              "Dhaval",
-                              "unselected",
-                              "flowers"
+                              "marguerite"
                               ]
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Hello this is repo Github Project")
+        print("Array are changed ok....")
         longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongGesture(gesture:)))
         collectionview.addGestureRecognizer(longPressGesture)
     }
