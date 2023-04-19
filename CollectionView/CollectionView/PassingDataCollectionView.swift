@@ -23,7 +23,12 @@ class PassingDataCollectionView: UIViewController {
                               "flowers",
                               "lotus",
                               "selected",
-                              "marguerite"
+                              "marguerite",
+                              "Raami",
+                              "Kavya",
+                              "Dhaval",
+                              "unselected",
+                              "flowers"
                               ]
     override func viewDidLoad() {
         super.viewDidLoad()
