@@ -28,6 +28,7 @@ class PassingDataCollectionView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Hello this is repo Github Project")
         longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongGesture(gesture:)))
         collectionview.addGestureRecognizer(longPressGesture)
     }
