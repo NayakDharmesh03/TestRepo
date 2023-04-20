@@ -22,20 +22,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let width = (view.frame.width-20)/3
-//                let layout = collectionview.collectionViewLayout as! UICollectionViewFlowLayout
-//                layout.itemSize = CGSize(width: width, height: width)
-        
+        print("Hello this is my new loaca machine")
     }
 
 
 }
 extension ViewController : UICollectionViewDelegateFlowLayout{
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//           return CGSize(width: collectionview.frame.width / 3 - 10, height:collectionview.frame.width / 3 - 10)
-//       }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let Size = (collectionview.frame.size.width-10)
         return CGSize(width: Size, height: Size)
@@ -49,23 +42,15 @@ extension ViewController : UICollectionViewDelegateFlowLayout{
         return 0
     }
 }
-//MARK
+//MARK:- collection view delegats
+
 extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     
      func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         let cell = collectionview.cellForItem(at: indexPath) as! MyCollectionViewCell
         
         cell.likeImage.image = UIImage(named: "selected")
-//        cell.likeCount.text = String(ViewController.count+1)
     }
-
-//     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath){
-//        let cell = collectionview.cellForItem(at: indexPath) as! MyCollectionViewCell
-//
-//        cell.likeImage.image = UIImage(named: "unselected")
-//    }
-    
-   
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 10
